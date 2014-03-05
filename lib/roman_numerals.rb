@@ -21,12 +21,10 @@ def roman_numerals(number)
   elsif number == 0
     result = "Haha, the Romans didn't come up with zero!"
   else
-    until number == 0
-      symbol.each do |digit, letter|
-        while number >= digit
-          result << letter
-          number = number - digit
-        end
+    symbol.each do |digit, letter|
+      while number >= digit
+        result << letter
+        number = number - digit
       end
     end
   end
